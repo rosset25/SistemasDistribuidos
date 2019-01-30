@@ -7,7 +7,7 @@ Estas son las prácticas de la asginatura Sistemas Distribuidos. En este reposit
 Los diferentes contenidos de dichas prácticas son los siguientes:
 
   * **Práctica 1.** Desarrollo local de la aplicación ejemplo
-  * **Práctica 2.** Páginas y formularios web (html)
+  * **Práctica 2.** Páginas y formularios web
   * **Práctica 3.** Sockets
   * **Práctica 4.** Objetos distribuidos en Java RMI
   * **Práctica 5.** Servicios web
