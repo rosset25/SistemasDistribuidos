@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- se van a definir las características de las dos tablas -->
+<!-- table-layout:fixed es para que la tabla no cambie de tamaño -->
+<!-- margin:auto para que se quede centrada -->
+<!-- padding (relleno) no haría falta, pero queda un poco mejor, deja más espacio (sólo th y td) -->
+<!-- se le podría hacer una clase para cada color pero tampoco se ahorran mucho con ello por ahora -->
+
+<!-- los td y th de las diferentes tablas se han tenido que definir una por una -->
+<style>
+table, td, th{ 
+    table-layout:fixed;
+   	margin: 0 auto;
+}
+
+th, td{
+	table-layout:fixed;
+	padding:5px;
+}
+
+table#t01, table#t01 th, table#t01 td{
+	border: 1px solid black;
+}
+
+table#t02{ 
+   table-layout:fixed;
+   margin: 0 auto;   
+}
+
+</style>
+
+</head>
+<body style="text-align:center"> 
+
+<h1>Tableros de juego</h1>
+<!-- espacio <br>  -->
+<h2>Tablero con menús de selección</h2>
+
+<!-- primera tabla (la que lleva borde) -->
+<!-- todas las columnas tienen un determinado tamaño por defecto -->
+<!-- se puede tratar como th(automáticamente ya está en el centro) o td(añadiéndole <b>) -->
+<table id="t01">
+  <colgroup>
+    <col span="5" width="80">
+  </colgroup>
+  <tr>
+    <th></th>
+    <th>A</th> 
+    <th>B</th>
+    <th>C</th>
+    <th>D</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <td style="background-color:blue"></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>2</th>
+    <td></td>
+    <td style="background-color:red"></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>3</th>
+    <td></td>
+    <td style="background-color:red"></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>4</th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td style="background-color:orange"></td>
+  </tr>
+</table>
+
+<br> <!-- línea vacía -->
+
+<form action="">
+  <select name="filas">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+&nbsp &nbsp &nbsp &nbsp <!-- espacios para separar -->
+  <select name="columnas">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+  </select>
+&nbsp &nbsp &nbsp &nbsp <!-- espacios para separar -->
+<input type="submit" value="Enviar">
+</form>
+
+<br> <!-- línea vacía -->
+
+<h2>Tablero con botones en las casillas</h2>
+<!-- segunda tabla (la que no lleva borde, con radio buttons) -->
+
+<form action="">
+
+<!-- todas las columnas tienen un determinado tamaño por defecto -->
+<table id="t02">
+  <colgroup>
+  	<col span="5" width="80">
+  </colgroup>
+  <tr>
+    <th></th> <!-- value: 00 -->
+    <th>A</th> <!-- value: 01 -->
+    <th>B</th> <!-- value: 02 -->
+    <th>C</th> <!-- value: 03 -->
+    <th>D</th> <!-- value: 04 -->
+  </tr>
+
+<!-- primer núm. indica la fila, segundo núm. la columna, ej: 21 -->  
+<!-- se le podría añadir checked a cualquiera de los radio buttons para que automáticamente estuviera seleccionado -->
+<tr>
+    <th>1</th> <!-- se puede tratar como th o td(añadiéndole <b>), value=10 -->
+    <td style="background-color:blue"> <input type="radio" name="casilla" value="11"> </td>
+    <td> <input type="radio" name="casilla" value="12"> </td>
+    <td> <input type="radio" name="casilla" value="13"> </td>
+    <td> <input type="radio" name="casilla" value="14"> </td>
+</tr>
+<tr>
+    <th>2</th> <!-- value: 20 -->
+    <td> <input type="radio" name="casilla" value="21"> </td>
+    <td style="background-color:red"> <input type="radio" name="casilla" value="22"> </td>
+    <td> <input type="radio" name="casilla" value="23"> </td>
+    <td> <input type="radio" name="casilla" value="24"> </td>
+</tr>
+<tr>
+    <th>3</th> <!-- value: 30 -->
+    <td> <input type="radio" name="casilla" value="31"> </td>
+    <td style="background-color:red"> <input type="radio" name="casilla" value="32"> </td>
+    <td> <input type="radio" name="casilla" value="33"> </td>
+    <td> <input type="radio" name="casilla" value="34"> </td>
+</tr>
+<tr>
+    <th>4</th> <!-- value: 40 -->
+    <td> <input type="radio" name="casilla" value="41"> </td>
+    <td> <input type="radio" name="casilla" value="42"> </td>
+    <td> <input type="radio" name="casilla" value="43"> </td>
+    <td style="background-color:orange"> <input type="radio" name="casilla" value="44"> </td>
+</tr>
+
+</table>
+
+<br> <!-- línea vacía -->
+<input type="submit" value="Enviar">
+</form>
+
+<br> <!-- línea vacía -->
+
+</body>
+</html>

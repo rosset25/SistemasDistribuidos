@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form action="" name="f1">
+<!-- fieldset: Para poner la línea gris-->
+<fieldset>
+    <!-- legend: Para incluir el título en el fieldset -->
+    <legend> <h2 style="color:blue;"> Registro de jugadores de "Hundir la Flota"</h2>
+    </legend>
+    <table border="0" style="width:80%;">
+    <tr>
+        <td>Nombre (*): </td>
+        <td><input type="text" name="nombre" required></td>
+    </tr>
+
+    <tr>
+        <td>Primer apellido (*):</td>
+        <td><input type="text" name="primerApellido" required></td>
+    </tr>
+ 
+    <tr>
+        <td>Segundo apellido:</td>
+        <td><input type="text" name="segundoApellido"></td>
+    </tr>
+  
+    <tr>
+        <td>DNI (*):</td>
+        <td><input type="text" name="dni" required></td>
+    </tr>
+  
+    <tr>
+        <td>Email:</td>
+        <td><input type="email" name="email"></td>
+    </tr>
+  
+    <tr>
+        <td>Tipo de pago (*):</td>
+        <td>
+            <input type="radio" name="tipoDePago" value="contrareembolso" required> Contrareembolso 
+            <input type="radio" name="tipoDePago" value="visa" required>  Tarjeta VISA 
+            <input type="radio" name="tipoDePago" value="cheque" required>   Cheque
+        </td> 
+    </tr>
+    
+    <tr>    
+        <td>Contraseña (*):</td>
+        <td><input type="password" name="contra" required></td>
+    </tr>
+  
+    <tr>
+        <td>Repita su contraseña (*):</td>
+        <td><input type="password" name="repitaContra" required></td>
+    </tr>
+
+    <tr>
+        <td><input type="submit" value="Enviar Datos" onclick="comprobarClave()"></td>
+        <td><input type="reset" value="Borrar Datos"></td>
+    </tr>
+    
+    <!-- Script para comprobar que las dos claves sean iguales -->
+    <script> 
+        function comprobarClave(){ 
+        contra = f1.contra.value 
+        repitaContra = f1.repitaContra.value 
+
+        if (contra != repitaContra) 
+            alert("Las dos claves son distintas...\n")
+        } 
+    </script>
+  
+</table>
+</fieldset>
+(*) Los campos con asterisco son obligatorios.
+
+</form>
+</body>
+</html>
