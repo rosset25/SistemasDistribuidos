@@ -10,7 +10,7 @@ Los diferentes contenidos de dichas prácticas son los siguientes:
   * **Práctica 2.** Páginas y formularios web
   * **Práctica 3.** Sockets
   * **Práctica 4.** Objetos distribuidos en Java RMI
-  * **Práctica 5.** Servicios web
+  * **Práctica 5.** Servicios web (REST)
   * **Práctica 6.** Aplicaciones web con servlets
   
   
