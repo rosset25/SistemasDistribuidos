@@ -1,4 +1,4 @@
-# Prácticas de Sistemas Distribuidos"
+# Prácticas de Sistemas Distribuidos
 
 *(Asignatura Sistemas Distribuidos)*
 
